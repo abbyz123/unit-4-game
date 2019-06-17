@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <style>
+        body {
+            background-image: url("assets/images/background.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+</head>
+<body">
+    <header>
+        <div class="container" id="gameHeader">
+            <h1>Crystal Collector!</h1>
+        </div>
+    </header>
+    <div class="container" id="gameRule">
+        <p>You will be given a number at the start of the game</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score</p>
+        <p>You win the game by mnatching your total score to the random number. You lose the game of your total score
+            goes above the random number</p>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        <p>Each time when the game starts, the game will change the values of each crystal</p>
+    </div>
+    <div class="container">
+        <div class="row" id="gameZone">
+            <div class="col-md-6" id="randomNumber"></div>
+            <div class="col-md-4" id="scoreTable">
+                <div class="row" id="win"></div>
+                <div class="row" id="lose"></div>
+            </div>
+        </div>
+        <div class="row" id="gemZone">
+            <div class="col" id="gem_1"></div>
+            <div class="col" id="gem_2"></div>
+            <div class="col" id="gem_3"></div>
+            <div class="col" id="gem_4"></div>
+        </div>
+    </div>
+
+    <div class="container" id="scoreHeader">
+        Your total score is:
+    </div>
+    <div class="container" id="scorePanel"></div>
+    </body>
+
+</html>
