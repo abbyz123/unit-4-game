@@ -60,6 +60,11 @@ $(function() {
                          " width=" + '\"' + "100%" + '\"' + 
                          " height=" + '\"' + "100%" + '\"' + 
                          " alt=" + '\"' + id + '\"' + ">");
+        // assign each gem a random number (1~10)
+        let gemScore = Math.floor(Math.random() * 9 + 1);
+
+        // bind the random number of the gem id
+        gemNumTable[id] = gemScore;
     });
 
     // score header and panel
