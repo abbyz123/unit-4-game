@@ -82,4 +82,12 @@ $(function() {
 
     // score panel
     $('#scorePanel').text(totalCollectScore);
+
+    // event handler on click gem image
+    $('#gemZone>*').each(function() {
+        $(this).on('click', function(e) {
+            totalCollectScore += gemNumTable[this.id];
+            $('#scorePanel').text(totalCollectScore);
+        })
+    })
 });
