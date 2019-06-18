@@ -83,6 +83,7 @@ $(function () {
     // score panel
     $('#scorePanel').text(totalCollectScore);
 
+    // add border when mouse moves over
     $("#gemZone>*").each(function () {
         $(this).find('img').mouseover(function() {
             console.log('mouseover ' + this.id);
