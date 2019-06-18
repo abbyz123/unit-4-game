@@ -83,6 +83,22 @@ $(function () {
     // score panel
     $('#scorePanel').text(totalCollectScore);
 
+    $("#gemZone>*").each(function () {
+        $(this).find('img').mouseover(function() {
+            console.log('mouseover ' + this.id);
+            $(this).css({
+                'border' : '4px solid green'
+            })
+        });
+
+        $(this).find('img').mouseout(function() {
+            console.log('mouseout ' + this.id);
+            $(this).css({
+                'border' : 'none'
+            })
+        });
+    })
+
     // event handler on click gem image
     $('#gemZone>*').each(function () {
         $(this).on('click', function (e) {
