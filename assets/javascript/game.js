@@ -86,14 +86,12 @@ $(function () {
     // add border when mouse moves over
     $("#gemZone>*").each(function () {
         $(this).find('img').mouseover(function() {
-            console.log('mouseover ' + this.id);
             $(this).css({
                 'border' : '4px solid green'
             })
         });
 
         $(this).find('img').mouseout(function() {
-            console.log('mouseout ' + this.id);
             $(this).css({
                 'border' : 'none'
             })
@@ -102,8 +100,8 @@ $(function () {
 
     // event handler on click gem image
     $('#gemZone>*').each(function () {
-        $(this).on('click', function (e) {
-            totalCollectScore += gemNumTable[this.id];
+        $(this).find('img').on('click', function (e) {
+            totalCollectScore += gemNumTable[$(this).parent().attr("id")];
             $('#scorePanel').text(totalCollectScore);
 
             // event handler when the score is updated
